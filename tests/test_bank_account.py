@@ -51,6 +51,8 @@ class TestBankAccount:
             account_page.click(LocatorsAccountPage.SUBMIT_BUTTON)
             deposit.date = datetime.datetime.now()
             deposit.amount = fibonacci_number
+
+            # TODO: решить проблему с тем, что список транзакций не успевает подтягиваться без sleep()
             sleep(1)
 
         with step('Проверить, что деньги внесены'):
@@ -68,6 +70,8 @@ class TestBankAccount:
         with step('Проверить, что деньги сняты'):
             account_page.check_balance('0')
             account_page.check_notification(deposit=False)
+
+            # TODO: решить проблему с тем, что список транзакций не успевает подтягиваться без sleep()
             sleep(3)
 
     def test_transactions_info(self, transactions_page):

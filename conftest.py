@@ -8,7 +8,7 @@ from pages.transactions_page import TransactionsPage
 from pages_checks.login_page_checks import LoginPageChecks
 from pages_checks.account_page_checks import AccountPageChecks, LocatorsAccountPage
 
-import urls
+from utils import urls
 
 
 def pytest_addoption(parser):
