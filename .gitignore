@@ -1,0 +1,5 @@
+/.venv/
+/bin/create_virtualenv.sh
+/bin/run_test.sh
+/csv/
+/reports/
