@@ -27,11 +27,6 @@ def fibonacci_number():
 
 class TestBankAccount:
 
-    @pytest.fixture(scope='class', autouse=True)
-    def attach_csv_to_report(self):
-        yield
-        attach_csv_to_allure()
-
     def test_sign_in(self, login_page):
         with step('Нажать на кнопку "Customer Login"'):
             login_page.click(LoginPageLocators.CUSTOMER_LOGIN_BUTTON)
@@ -77,3 +72,4 @@ class TestBankAccount:
     def test_transactions_info(self, transactions_page):
         transactions_page.find_transaction(deposit)
         transactions_page.find_transaction(withdrawl)
+        attach_csv_to_allure()

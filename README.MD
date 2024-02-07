@@ -9,20 +9,20 @@ https://github.com/NikitaDudich/simtest
 
 3. Создать виртуальное окружение и установить необходимые зависимости:
     
-    `. bin/create_venv.sh`
+    `. bin/create_venv.sh java` 
 
 **N.B** Для просмотра отчётов необходимо установить allure
 ### Запуск теста
 
-a) Запустить Selenium GRID, для чего нужно эткрыть директорию проекта в новой вкладке терминала (ctrl+shift+t) и выполнить команду:
+a) Запустить Selenium GRID, для чего нужно открыть директорию проекта в новой вкладке терминала (ctrl+shift+t) и выполнить команду:
 
-    `java -jar selenium-server-4.17.0.jar standalone`
+    java -jar selenium-server-4.17.0.jar standalone
 
 **N.B** Необходима java 11 или новее
 
 b) Запустить тест в первой вкладке терминала:
 	
-    `. bin/run_tests.sh`
+    . bin/run_tests.sh
 
 
 ### **Параметры которые можно передать командой pytest** 

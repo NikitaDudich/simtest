@@ -10,14 +10,14 @@ class TransactionsPage(BasePage):
         for transaction in transactions_list:
             actual_transaction = {
                 'date': transaction.find_element(
-                    TransactionsPageLocators.TRANSACTION_DATE[0],
-                    TransactionsPageLocators.TRANSACTION_DATE[1]).text,
+                    TransactionsPageLocators.TRANSACTION_DATE['By'],
+                    TransactionsPageLocators.TRANSACTION_DATE['selector']).text,
                 'amount': transaction.find_element(
-                    TransactionsPageLocators.TRANSACTION_AMOUNT[0],
-                    TransactionsPageLocators.TRANSACTION_AMOUNT[1]).text,
+                    TransactionsPageLocators.TRANSACTION_AMOUNT['By'],
+                    TransactionsPageLocators.TRANSACTION_AMOUNT['selector']).text,
                 'type': transaction.find_element(
-                    TransactionsPageLocators.TRANSACTION_TYPE[0],
-                    TransactionsPageLocators.TRANSACTION_TYPE[1]).text,
+                    TransactionsPageLocators.TRANSACTION_TYPE['By'],
+                    TransactionsPageLocators.TRANSACTION_TYPE['selector']).text,
                 }
             if verify_transaction(actual_transaction, expected_transaction):
                 success = True

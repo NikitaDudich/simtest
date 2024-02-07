@@ -1,7 +1,6 @@
 from pathlib import Path
 import csv
 import allure
-from utils.months import MONTHS
 
 
 def attach_csv_to_allure():
@@ -39,7 +38,7 @@ def verify_transaction(actual_transaction, expected_transaction) -> bool:
         if actual_transaction['type'] == expected_transaction.transaction_type:
             expected_date, actual_date = expected_transaction.date, actual_transaction['date']
             if str(expected_date.year) in actual_date:
-                if MONTHS[str(expected_date.month)] in actual_date:
+                if expected_transaction.date.strftime('%b') in actual_date:
                     time = expected_transaction.date.strftime('%-H:%M:%S')
                     if time in actual_date:
                         add_transaction_to_csv_file(expected_transaction)
