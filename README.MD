@@ -9,7 +9,7 @@ https://github.com/NikitaDudich/simtest
 
 3. Создать виртуальное окружение и установить необходимые зависимости:
     
-    `. bin/create_venv.sh java` 
+    `. bin/create_venv.sh` 
 
 **N.B** Для просмотра отчётов необходимо установить allure
 ### Запуск теста
